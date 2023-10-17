@@ -1,0 +1,36 @@
+<img class="logo" src="../../../assets/logo/logo2a.png" alt="">
+
+<ion-content>
+  <p id="inicio" class="cursiva">Transporte al Alcance de tus Horarios</p>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>
+        Iniciar Sesión
+      </ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <form [formGroup]="formularioLogin" (ngSubmit)="log()">
+        <ion-item style="--border-width: 2px;">
+          <ion-label color="rgb(145, 216, 134)" position="floating">Correo</ion-label>
+          <ion-input formControlName="usuario"></ion-input>
+        </ion-item>
+        <ion-item style="--border-width: 2px;">
+          <ion-label position="floating">Contraseña</ion-label>
+          <ion-input type="password" formControlName="contraseña"></ion-input>
+        </ion-item>
+
+        <a class="olvide" id="recuperar-clave" [routerLink]="('/recuperar-clave')">Olvidé mi contraseña</a>
+
+
+        <ion-button id="button-inner" style="display:flex;align-items:center;justify-content:center" type="submit"
+          class="boton-entrar">Entrar</ion-button>
+      </form>
+
+    </ion-card-content>
+  </ion-card>
+
+  <ion-footer style="margin-bottom: -80%;">
+    <p id="reg-cuenta">¿No tienes cuenta?</p>
+    <a id="link-reg" (click)="irReg()">Quiero registrarme</a>
+  </ion-footer>
+</ion-content>
